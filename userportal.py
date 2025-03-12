@@ -7,7 +7,7 @@ import smtplib
 from email.mime.multipart import MIMEMultipart
 from email.mime.text import MIMEText
 from io import BytesIO
-import os
+from datetime import datetime
 
 # GitHub Configuration
 GITHUB_TOKEN = os.getenv("GITHUB_TOKEN")  # Add your GitHub token in the .env file
@@ -179,6 +179,11 @@ if submit_button:
 if st.button("View Historic Data"):
     df, sha = fetch_excel_from_github()
     if df is not None:
-        st.success("Data fetched successfully!")
+        last_updated = df.iloc[0]["Last Updated"]
+        last_updated_dt = datetime.strptime(last_updated, "%Y-%m-%d %H:%M:%S")
+        formatted_date = last_updated_dt.strftime("%d %B %Y")
+        st.success(f"Current Data Last updated on: {formatted_date}")
         st.write("Current Data:")
         st.dataframe(df)
+
+st.write("updated")
