@@ -105,8 +105,8 @@ st.markdown('</div>', unsafe_allow_html=True)
 st.sidebar.header("Upload Files")
 
 # File uploaders in sidebar
-society_file = st.sidebar.file_uploader("Upload Society Names (CSV/Excel)", type=["csv", "xlsx"], key="society")
-questions_file = st.sidebar.file_uploader("Upload Questions (CSV/Excel)", type=["csv", "xlsx"], key="questions")
+society_file = st.sidebar.file_uploader("⚠️ Upload Societies (CSV/Excel) in col 0 only", type=["csv", "xlsx"], key="society")
+questions_file = st.sidebar.file_uploader("⚠️ Upload Questions (CSV/Excel) in col 0 only", type=["csv", "xlsx"], key="questions")
 
 submit_button = st.sidebar.button("Submit Data")
 
