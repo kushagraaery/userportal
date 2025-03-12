@@ -186,5 +186,3 @@ if st.button("View Historic Data"):
         st.success(f"Current Data Last updated on: {formatted_date}")
         st.write("Current Data:")
         st.dataframe(df)
-
-st.write("updated")
