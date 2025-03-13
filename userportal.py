@@ -120,7 +120,7 @@ if submit_button:
             upload_file_to_github(questions_file, "Questions")
         with st.spinner("Wait for a few seconds for the data to update..."):
                 time.sleep(10)
-                st.page_link("http://localhost:8501/", label="Navigate to Admin Portal", icon="📝")
+                st.page_link("https://usmapocbotnew.streamlit.app/", label="Navigate to USMA POC", icon="📝")
 
     def send_email(smtp_server, smtp_port, sender_email, sender_password, receiver_email, subject, html_content):
         # Create the email message
