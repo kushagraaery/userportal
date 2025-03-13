@@ -183,6 +183,6 @@ if st.button("View Historic Data"):
         last_updated = df.iloc[0]["Last Updated"]
         last_updated_dt = datetime.strptime(last_updated, "%Y-%m-%d %H:%M:%S")
         formatted_date = last_updated_dt.strftime("%d %B %Y")
-        st.success(f"Current Data Last updated on: {formatted_date}")
+        st.success(f"Current Data Last Updated on: {formatted_date}")
         st.write("Current Data:")
         st.dataframe(df)
