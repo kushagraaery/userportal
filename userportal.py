@@ -173,7 +173,7 @@ if submit_button:
         status = send_email(smtp_server, smtp_port, sender_email, sender_password, receiver_email, email_subject, email_body)
         # Display success or error message
         if "successfully" in status:
-            st.success("Successfully sent updation mail to Incedo Admin Team! Please wait for a week for the Incedo Admin Team to review the prompts and fetch you the data")
+            st.success("Successfully sent updation mail to Incedo Admin Team! Please wait for a week for the Incedo Admin Team to review the prompts and fetch you the results.")
         else:
             st.error("Error while sending updation mail to Incedo Admin Team!")
 
